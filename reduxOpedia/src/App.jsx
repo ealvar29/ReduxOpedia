@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./app/layout/Header";
+import Counter from "./app/components/Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <Header />
+        <Counter />
       </div>
     </>
   );
