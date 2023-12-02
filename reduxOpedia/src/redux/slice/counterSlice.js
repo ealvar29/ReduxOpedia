@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { count: 0, multiplyBy: 0 };
+const initialState = { count: 10, multiplyBy: 0 };
 
 export const counterSlice = createSlice({
   name: "counter",
@@ -14,11 +14,10 @@ export const counterSlice = createSlice({
       state.count -= 1;
     },
     multiplier: (state, action) => {
-      console.log(action);
-      state.count * action.payload;
+      state.count = state.count * Number(action.payload);
     },
     decrementMultiplier: (state, action) => {
-      state.count -= action.payload;
+      state.count = state.count * Number(action.payload);
     },
   },
 });
