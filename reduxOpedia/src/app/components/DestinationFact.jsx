@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function DestinationFact() {
   const selectedDestination = useSelector(
@@ -7,7 +7,9 @@ function DestinationFact() {
   );
   if (selectedDestination == undefined) {
     return (
-      <div className="text-center pt-4 text-red-400">Select a Destination</div>
+      <div className="text-center pt-4 text-orange-400">
+        Select a Destination
+      </div>
     );
   } else {
     return (
