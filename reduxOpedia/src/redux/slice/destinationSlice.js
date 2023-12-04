@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { resetApp } from "../action/actions";
 
 const initialState = () => {
   return {
@@ -35,6 +36,11 @@ export const destinationSlice = createSlice({
       state.destinationSelected = null;
       console.log(action);
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(resetApp, (state) => {
+      state.destinationSelected = null;
+    });
   },
 });
 
