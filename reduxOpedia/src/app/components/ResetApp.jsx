@@ -4,11 +4,14 @@ import { resetDestination } from "../../redux/slice/destinationSlice";
 
 function ResetApp() {
   const dispatch = useDispatch();
+  const resetFunctions = () => {
+    dispatch(resetDestination());
+  };
   return (
     <div className="text-center">
       <button
         className="rounded-2xl bg-orange-500"
-        onClick={() => dispatch(resetDestination())}
+        onClick={() => resetFunctions()}
       >
         Reset App
       </button>
